@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>parajuligrouptech.com</title>
+  <style>
+    /* Reset & base */
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #121212;
+      color: #eee;
+    }
+    a {
+      color: #00aaff;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Header */
+    header {
+      background: #1f1f1f;
+      padding: 1rem 2rem;
+      text-align: center;
+      font-size: 1.8rem;
+      font-weight: bold;
+      letter-spacing: 2px;
+      border-bottom: 2px solid #00aaff;
+    }
+
+    /* Featured banner */
+    .featured {
+      background: url('https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
+      height: 350px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+      padding: 0 1rem;
+      position: relative;
+    }
+    .featured::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.5);
+      z-index: 0;
+    }
+    .featured-content {
+      position: relative;
+      z-index: 1;
+      max-width: 700px;
+    }
+    .featured-content h1 {
+      font-size: 2.8rem;
+      margin-bottom: 0.5rem;
+    }
+    .featured-content p {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+    .featured-content button {
+      background: #00aaff;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      font-size: 1rem;
+      border-radius: 25px;
+      cursor: pointer;
+      color: #fff;
+      transition: background-color 0.3s ease;
+    }
+    .featured-content button:hover {
+      background: #0088cc;
+    }
+
+    /* Product grid */
+    .products {
+      max-width: 1200px;
+      margin: 2rem auto 4rem;
+      padding: 0 1rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.8rem;
+    }
+
+    .product-card {
+      background: #1e1e1e;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,170,255,0.2);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s ease;
+    }
+    .product-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 25px rgba(0,170,255,0.6);
+    }
+    .product-image {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-bottom: 1px solid #333;
+    }
+    .product-info {
+      padding: 1rem;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .product-info h3 {
+      margin: 0 0 0.5rem 0;
+      font-weight: 700;
+      font-size: 1.3rem;
+      color: #00aaff;
+    }
+    .product-info p {
+      flex-grow: 1;
+      font-size: 0.95rem;
+      line-height: 1.4;
+      color: #ccc;
+      margin-bottom: 1rem;
+    }
+    .product-info button {
+      background: #00aaff;
+      border: none;
+      padding: 0.6rem 1.2rem;
+      font-size: 0.95rem;
+      border-radius: 20px;
+      cursor: pointer;
+      color: #fff;
+      align-self: flex-start;
+      transition: background-color 0.3s ease;
+    }
+    .product-info button:hover {
+      background: #0088cc;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 1rem 2rem;
+      font-size: 0.9rem;
+      color: #555;
+      border-top: 1px solid #222;
+      background: #121212;
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 480px) {
+      .featured-content h1 {
+        font-size: 2rem;
+      }
+      .featured-content p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>parajuligrouptech.com</header>
+
+<section class="featured">
+  <div class="featured-content">
+    <h1>Revolutionize Your Tech Experience</h1>
+    <p>Discover the latest innovations crafted to boost your productivity and style.</p>
+    <button onclick="alert('Explore our featured product!')">Explore Now</button>
+  </div>
+</section>
+
+<section class="products">
+  <div class="product-card">
+    <img class="product-image" src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=600&q=80" alt="Smartwatch" />
+    <div class="product-info">
+      <h3>Smartwatch X100</h3>
+      <p>Stay connected on the go with the new Smartwatch X100, featuring heart-rate monitoring and GPS.</p>
+      <button onclick="alert('Buy Smartwatch X100')">Buy Now</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <img class="product-image" src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80" alt="Wireless Earbuds" />
+    <div class="product-info">
+      <h3>Wireless Earbuds Pro</h3>
+      <p>Experience immersive sound quality with noise cancellation and long-lasting battery life.</p>
+      <button onclick="alert('Buy Wireless Earbuds Pro')">Buy Now</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <img class="product-image" src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=600&q=80" alt="Gaming Laptop" />
+    <div class="product-info">
+      <h3>GamerX Laptop</h3>
+      <p>Powerful performance and stunning graphics designed for hardcore gamers and creators.</p>
+      <button onclick="alert('Buy GamerX Laptop')">Buy Now</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <img class="product-image" src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600&q=80" alt="Smart Home Assistant" />
+    <div class="product-info">
+      <h3>Smart Home Assistant</h3>
+      <p>Your personal assistant for smart home control, entertainment, and everyday convenience.</p>
+      <button onclick="alert('Buy Smart Home Assistant')">Buy Now</button>
+    </div>
+  </div>
+</section>
+
+<footer>
+  &copy; 2025 parajuligrouptech.com. All rights reserved.
+</footer>
+
+</body>
+</html>
